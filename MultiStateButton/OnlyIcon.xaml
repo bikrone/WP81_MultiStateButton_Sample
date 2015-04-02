@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="MultiStateButton.OnlyIcon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MultiStateButton"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <SolidColorBrush x:Key="ActiveButtonColor" Color="#3498db"/>
+        <SolidColorBrush x:Key="InactiveButtonColor" Color="#FF708183"/>
+    </Page.Resources>
+    <Grid Background="WhiteSmoke">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <BitmapIcon UriSource="/Assets/Icons/SearchIcon.png"
+                            Width="80" Height="80"
+                            x:Name="HomeIcon"
+                            Margin="0,0,24,0"                          
+                            Foreground="{StaticResource ActiveButtonColor}"/>
+            <BitmapIcon UriSource="/Assets/Icons/SearchIcon.png"
+                            Width="80" Height="80"
+                            x:Name="SearchIcon"
+                            Margin="0,0,0,0"                            
+                            Foreground="{StaticResource InactiveButtonColor}"/>
+        </StackPanel>
+    </Grid>
+</Page>
